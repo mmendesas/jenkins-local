@@ -13,6 +13,9 @@ jenkins:
         - 'Overall/Read:authenticated'
   remotingSecurity:
     enabled: true
+    
+jobs:
+  - file: ./jobdsl/001-bootstrap.groovy
 
 unclassified:
   location:

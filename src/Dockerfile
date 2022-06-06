@@ -9,5 +9,6 @@ RUN jenkins-plugin-cli --clean-download-directory --list --view-security-warning
 
 ## jenkins home setup
 COPY ./config/jenkins_casc.yml /var/jenkins_home/jenkins_casc.yml
+COPY ./config/jobdsl /var/jenkins_home/jobdsl
 
 WORKDIR $JENKINS_HOME
