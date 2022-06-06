@@ -17,3 +17,7 @@ jenkins:
 unclassified:
   location:
     url: ${JENKINS_URL}
+  simple-theme-plugin:
+    elements:
+      - cssUrl:
+          url: 'https://tobix.github.io/jenkins-neo2-theme/dist/neo-light.css'
