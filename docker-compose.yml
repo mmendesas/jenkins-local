@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  # launch jenkins master controller
+  jenkins_local:
+    container_name: jenkins_local_main
+    image: jenkins-local
+    build: ./src/
+    env_file:
+      - .env.jenkins
+    ports:
+      - 8787:8080
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
