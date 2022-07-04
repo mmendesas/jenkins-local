@@ -21,6 +21,18 @@ jenkins:
             uri: 'tcp://host.docker.internal:2375'
           readTimeout: 60
         name: 'docker'
+        templates:
+          - connector: 'attach'
+            dockerTemplateBase:
+              cpuPeriod: 0
+              cpuQuota: 0
+              image: 'my-agent-001'
+            instanceCapStr: '10'
+            labelString: 'agent-001'
+            name: 'jenkins-agent-001'
+            pullStrategy: PULL_NEVER
+            pullTimeout: 300
+            remoteFs: '/home/jenkins/agent'
 
 jobs:
   - file: ./jobdsl/001-bootstrap.groovy
