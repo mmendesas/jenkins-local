@@ -13,7 +13,15 @@ jenkins:
         - 'Overall/Read:authenticated'
   remotingSecurity:
     enabled: true
-    
+  clouds:
+    - docker:
+        dockerApi:
+          connectTimeout: 60
+          dockerHost:
+            uri: 'tcp://host.docker.internal:2375'
+          readTimeout: 60
+        name: 'docker'
+
 jobs:
   - file: ./jobdsl/001-bootstrap.groovy
   - file: ./jobdsl/002-test-agent.groovy

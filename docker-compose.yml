@@ -15,3 +15,16 @@ services:
       - 8787:8080
     extra_hosts:
       - 'host.docker.internal:host-gateway'
+
+  # expose tcp socket for access docker-api
+  # http://localhost:2375/containers/json
+  jenkins_daemon:
+    container_name: jenkins_local_daemon
+    image: alpine/socat
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 2375:2375
+    command:
+      - TCP4-LISTEN:2375,fork,reuseaddr
+      - UNIX-CONNECT:/var/run/docker.sock
