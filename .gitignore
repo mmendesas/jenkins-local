@@ -2,3 +2,6 @@
 */*/.DS_Store
 
 .env.jenkins
+
+src/secret-files/*
+!src/secret-files/.gitkeep

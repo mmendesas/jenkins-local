@@ -8,7 +8,8 @@ job('admin/__jenkins-jobs') {
     scm {
         git {
             remote {
-                url("${LOCAL_USER}@docker.for.mac.localhost:${LOCAL_JOBS}/.git")
+                url("${LOCAL_USER}@host.docker.internal:${LOCAL_JOBS}/.git")
+                credentials('ssh-local-key')
             }
             branch(':^origin/main$')
         }

@@ -8,6 +8,9 @@ services:
     build: ./src/
     env_file:
       - .env.jenkins
+    volumes:
+      - ./src/config/init.groovy.d:/var/jenkins_home/init.groovy.d
+      - ./src/secret-files:/var/jenkins_home/secret-files
     ports:
       - 8787:8080
     extra_hosts:
