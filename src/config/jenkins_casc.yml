@@ -16,6 +16,7 @@ jenkins:
     
 jobs:
   - file: ./jobdsl/001-bootstrap.groovy
+  - file: ./jobdsl/002-test-agent.groovy
 
 unclassified:
   location:
