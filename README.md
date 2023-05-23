@@ -1,6 +1,6 @@
 # JENKINS LOCAL
 
-A helper repo to test/validate your jenkins pipeline on your `local environment`
+Automated CI/CD structure with jenkins and docker to test/validate your pipeline `locally`
 
 ## Getting started
 
@@ -18,19 +18,9 @@ You can use this repo to start your jenkins with agents in your local machine wi
 - `Enable ssh in your Mac` - Required to make your host accept ssh connection
   - System preferences > Sharing > Remote Login
 
-### Avaiable Scripts
-
-In the project directory, you can see the follow structure:
-
-**`stereo/`**
-
-## Tips and Tricks
-
-- `yarn add --dev -W package` - Use this command inside `/stereo` to install package in workspace. After that you only need to add it in your `package` dependency.
-
 ## Built With
 
-- [Docker](https://www.docker.com/)  - The Monorepo manager
+- [Docker](https://www.docker.com/)  - Container platform
 - [JCASC](https://www.jenkins.io/projects/jcasc/)  -  Jenkins configuration as code
 - [docker-plugin](https://plugins.jenkins.io/docker-plugin/)  -  docker plugin for jenkins
 
