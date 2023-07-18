@@ -44,4 +44,12 @@ unclassified:
   simple-theme-plugin:
     elements:
       - cssUrl:
-          url: 'https://tobix.github.io/jenkins-neo2-theme/dist/neo-light.css'
+          url: 'https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-green.css'
+      - cssText:
+          text: |-
+            #page-header {
+              background-color: rgb(38, 166, 154);
+            }
+            .console-output {
+              color: #eee !important;
+            }
