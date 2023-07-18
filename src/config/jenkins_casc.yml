@@ -44,7 +44,7 @@ unclassified:
   simple-theme-plugin:
     elements:
       - cssUrl:
-          url: 'https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-green.css'
+          url: 'https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-teal.css'
       - cssText:
           text: |-
             #page-header {
