@@ -4,19 +4,39 @@ Automated CI/CD structure with jenkins and docker to test/validate your pipeline
 
 ## Getting started
 
-You can use this repo to start your jenkins with agents in your local machine with `docker`
+1. Give it a try with this simple command
 
-1. update env vars according to your needs
-   - `$ cp .env.template .env.jenkins`
-2. enable local host communication
-   - `$ ./src/scripts/generate_ssh_keys.sh`
-3. start jenkins_controller_main and daemon
-   - `$ docker-compose up -d`
+   `$ ./scripts/run.sh`
 
-### Prerequisites
+2. Go to your controller at [http://localhost:8787](http://localhost:8787)
+
+   <img src="docs/imgs/jenkins-controller.png" alt=“jenkins-controller” width="500">
+
+3. Go to `admin > __test-agent` and Build the job
+
+   <img src="docs/imgs/jenkins-test-agent.png" alt=“jenkins-test-agent” width="500">
+
+### Features
+
+- Test your local commits before create a PR
+- Jenkins controller with agent communication using docker
+- Control everything you need on your own machine
+
+## How to
+
+### Enable ssh locally
 
 - `Enable ssh in your Mac` - Required to make your host accept ssh connection
+
   - System preferences > Sharing > Remote Login
+
+   <img src="docs/imgs/remote-login.png" alt=“remote-login” width="500">
+
+### Troubleshooting
+
+1. `Error: Connection refused`
+   - Error message: `stderr: ssh: connect to host host.docker.internal port 22: Connection refused`
+   - If you are trying to run `__jenkins-jobs` job and get error, you can solve it by enabling your `remote login`
 
 ## Built With
 
