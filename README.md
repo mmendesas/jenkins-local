@@ -7,9 +7,9 @@ Automated CI/CD structure with jenkins and docker to test/validate your pipeline
 You can use this repo to start your jenkins with agents in your local machine with `docker`
 
 1. update env vars according to your needs
-   - `$ cp .env.template jenkins.env`
+   - `$ cp .env.template .env.jenkins`
 2. enable local host communication
-   - `$ ./src/scripts/gener_ate_ssh_keys.sh`
+   - `$ ./src/scripts/generate_ssh_keys.sh`
 3. start jenkins_controller_main and daemon
    - `$ docker-compose up -d`
 
