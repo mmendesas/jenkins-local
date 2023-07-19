@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+ul {
+  margin-top: 50px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li {
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.joke-container {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.joke-container > div {
+  display: flex;
+  gap: 10px;
+}
+
+.joke-box {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(2px);
+}
+
+.like {
+  background-color: green;
+}
+.dislike {
+  background-color: #f84747;
+}

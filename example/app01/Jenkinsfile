@@ -1,0 +1,13 @@
+pipeline {
+  environment {
+    CI = 'true'
+  }
+  stages {
+    stage('Prepare') {
+      sh 'npm install'
+    }
+    stage('Test') {
+      sh 'npm test'
+    }
+  }
+}
