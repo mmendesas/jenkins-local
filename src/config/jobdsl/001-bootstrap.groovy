@@ -17,7 +17,7 @@ job('admin/__jenkins-jobs') {
     steps {
         shell('mkdir -p jobdsl/src/main/groovy')
         dsl {
-            external('jobdsl/job-001.groovy')
+            external('example/jenkins-jobs/**/*.groovy')
             removeAction('DELETE')
         }
     }
