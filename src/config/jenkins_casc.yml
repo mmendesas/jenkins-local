@@ -34,6 +34,10 @@ jenkins:
             pullTimeout: 300
             remoteFs: '/home/jenkins/agent'
 
+security:
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: 'acceptFirstConnectionStrategy'
+
 jobs:
   - file: ./jobdsl/001-bootstrap.groovy
   - file: ./jobdsl/002-test-agent.groovy
@@ -51,5 +55,8 @@ unclassified:
               background-color: rgb(38, 166, 154);
             }
             .console-output {
+              color: #eee !important;
+            }
+            .CodeMirror pre {
               color: #eee !important;
             }
