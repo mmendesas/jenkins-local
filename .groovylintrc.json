@@ -1,8 +1,14 @@
 {
-    "extends": "recommended",
+    "extends": "recommended-jenkinsfile",
     "rules": {
         "CompileStatic": {
             "enabled": false
+        },
+        "GStringExpressionWithinString": {
+            "enabled": false
+        },
+        "Indentation": {
+            "spacesPerIndentLevel": 2
         }
     }
 }
