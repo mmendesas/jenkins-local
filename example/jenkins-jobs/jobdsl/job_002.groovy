@@ -1,4 +1,4 @@
-pipelineJob('job_test_002') {
+pipelineJob('job_002') {
   description 'Running inside an external agent'
   parameters {
     stringParam('name', 'Someone', 'name of the person')

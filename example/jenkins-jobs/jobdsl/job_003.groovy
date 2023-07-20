@@ -1,4 +1,4 @@
-pipelineJob('job_test_003') {
+pipelineJob('job_003') {
   description 'Mapping to jenkinsfile inside workspace'
   definition {
     cps {

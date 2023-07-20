@@ -1,13 +1,18 @@
 pipeline {
+  agent { label 'agent-001' }
   environment {
     CI = 'true'
   }
   stages {
     stage('Prepare') {
-      sh 'npm install'
+      steps {
+        sh 'npm install'
+      }
     }
     stage('Test') {
-      sh 'npm test'
+      steps {
+        sh 'npm test'
+      }
     }
   }
 }

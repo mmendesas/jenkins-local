@@ -1,4 +1,4 @@
-job('job_test_001') {
+job('job_001') {
     description 'sample job 001'
     logRotator(1)
     steps {
