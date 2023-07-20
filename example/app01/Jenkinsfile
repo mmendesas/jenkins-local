@@ -6,6 +6,9 @@ pipeline {
   stages {
     stage('Prepare') {
       steps {
+        sh 'pwd'
+        sh 'whoami'
+        sh 'ls -lash'
         sh 'npm install'
       }
     }
