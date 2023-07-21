@@ -1,20 +1,34 @@
 # JENKINS LOCAL
 
-Automated CI/CD structure with jenkins and docker to test/validate your pipeline `locally`
+Automated CI/CD structure with jenkins and docker to test/validate your pipeline **`on your own machine`**
+
+<img src="docs/imgs/jenkins-local.png" alt=“jenkins-controller” width="500">
+
+<ul>
+   <li>Test out your local projects</li>
+   <li>Define your agents based on your project stack</li>
+   <li>Use main controller to manage everything (plugins, config etc)</li>
+</ul>
 
 ## Getting started
 
-1. Give it a try with this simple command
+<img src="docs/imgs/jenkins-controller.png" alt=“jenkins-controller” width="500">
 
-   `$ ./scripts/run.sh`
+1. From `/jenkins-local` root folder, you can run the command:
+
+   **`$ ./scripts/run.sh`**
 
 2. Go to your controller at [http://localhost:8787](http://localhost:8787)
 
-   <img src="docs/imgs/jenkins-controller.png" alt=“jenkins-controller” width="500">
+3. Open `admin > __jenkins-jobs` and Build the job
 
-3. Go to `admin > __test-agent` and Build the job
+4. Go to `Dashboard` and you can see some examples
 
-   <img src="docs/imgs/jenkins-test-agent.png" alt=“jenkins-test-agent” width="500">
+## How it works?
+
+- Communication between containers and your local host are managed by exposed **docker-api**
+- From containers you can read your local **app001/.git** project
+- From Jenkins Master you can spin up an **Agent** to run your CI flow
 
 ### Features
 
@@ -27,10 +41,8 @@ Automated CI/CD structure with jenkins and docker to test/validate your pipeline
 ### Enable ssh locally
 
 - `Enable ssh in your Mac` - Required to make your host accept ssh connection
-
   - System preferences > Sharing > Remote Login
-
-   <img src="docs/imgs/remote-login.png" alt=“remote-login” width="500">
+    <img src="docs/imgs/remote-login.png" alt=“remote-login” width="500">
 
 ### Troubleshooting
 
