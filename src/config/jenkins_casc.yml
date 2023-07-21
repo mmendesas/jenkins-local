@@ -33,6 +33,17 @@ jenkins:
             pullStrategy: PULL_NEVER
             pullTimeout: 300
             remoteFs: '/home/jenkins/agent'
+          - connector: 'attach'
+            dockerTemplateBase:
+              cpuPeriod: 0
+              cpuQuota: 0
+              image: 'my-agent-002'
+            instanceCapStr: '10'
+            labelString: 'agent-002'
+            name: 'jenkins-agent-002'
+            pullStrategy: PULL_NEVER
+            pullTimeout: 300
+            remoteFs: '/home/jenkins/agent'
 
 security:
   gitHostKeyVerificationConfiguration:
