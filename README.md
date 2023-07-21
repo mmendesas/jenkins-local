@@ -14,15 +14,17 @@ Automated CI/CD structure with jenkins and docker to test/validate your pipeline
 
 <img src="docs/imgs/jenkins-controller.png" alt=“jenkins-controller” width="500">
 
-1. From `/jenkins-local` root folder, you can run the command:
+1. Update `.env.jenkins` with your data using env.template
+
+2. From `/jenkins-local` root folder, you can run the command:
 
    **`$ ./scripts/run.sh`**
 
-2. Go to your controller at [http://localhost:8787](http://localhost:8787)
+3. Go to your controller at [http://localhost:8787](http://localhost:8787)
 
-3. Open `admin > __jenkins-jobs` and Build the job
+4. Open `admin > __jenkins-jobs` and Build the job
 
-4. Go to `Dashboard` and you can see some examples
+5. Go to `Dashboard` and you can see some examples
 
 ## How it works?
 
