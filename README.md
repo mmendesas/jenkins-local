@@ -28,14 +28,15 @@ Automated CI/CD structure with jenkins and docker to test/validate your pipeline
 
 ## How it works?
 
-- Communication between containers and your local host are managed by exposed **docker-api**
-- From containers you can read your local **app001/.git** project
-- From Jenkins Master you can spin up an **Agent** to run your CI flow
+- The communication between containers and your local host is managed by exposing **docker-api**
+- From containers you can read/fetch your local **app001/.git** project
+- From **Jenkins Master** you can spin up an **Agent** to run your CI flow based on your project needs
 
 ### Features
 
 - Test your local commits before create a PR
 - Jenkins controller with agent communication using docker
+- Multiple agents running in parallel
 - Control everything you need on your own machine
 
 ## How to
